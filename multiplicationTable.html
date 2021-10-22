@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script>
+		function myFunction(){
+        let i,j = document.getElementById("val").value ;
+        let result = '';
+        if (j>0){
+        for(i=1;i<=10;){
+      	   result = result + j + " x " + i + " = " + j*i + "<hr>";
+      	  document.getElementById("demo").innerHTML =  result  ;
+      	  i++;
+      	}
+        } else {document.getElementById("demo").innerHTML = "Put a number greater than Zero!";}
+        }
+        function fun(){  
+   		document.getElementById("myform").reset();  
+ 		} 
+ 		    
+	</script>
+	<style>
+		*{padding: 0px; margin: 0px}
+   </style>
+</head>
+<body>
+	<div style="width:500px; margin: 0px auto; border:1px #4a0b9d26;; border-style:dotted solid; height:600px">
+	<h1 style = "color:white;background-color: blue; border-radius: 5px; padding:10px; margin-bottom: 10px;margin-top: 10px;">MULTIPLICATION TABLE</h1>
+	<form action="#" id = "myform">
+	<input placeholder="Enter A Number" type="text" id="val" style = "font-size: 25px; font-weight: bolder; "> 
+	<input type = "button" value = "Reset data" onClick = "fun()" style = "background-color:red; color: white; font-size: 20px; padding:5px;"/><br><br>
+	<input id= "myBtn" type= "button" onclick="myFunction()" value= "Show Multiplication Table for the Given Number" style = "background-color:green; color: white; font-size: 20px; padding:5px;"><br><br>
+     
+	</form>
+	<p id= "demo" style = "color:white; font-size: 25px; font-weight: bold; background-color: #996688; width:300px; padding:20px;">After input a number, you will see the result here</p>
+	
+	</div>
+	<div style="text-align: center;">&copy;Quazi Md Mainul Islam</div>
+	<script>
+      var input = document.getElementById("val");
+      	input.focus();
+		input.select();
+		input.addEventListener("keyup", function(event) {
+ 		 if (event.keyCode === 13) {
+  		event.preventDefault();
+   		document.getElementById("myBtn").click();
+  }
+});
+	</script>
+	
+	
+</body>
+</html>
